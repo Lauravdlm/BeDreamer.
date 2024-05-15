@@ -1,0 +1,124 @@
+//  Navegación principal vertical
+
+#navbarNav {
+    visibility: hidden;
+    transition: 0.4s ease-in-out;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    z-index: 2000;
+    overflow-y: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+    &.active {
+        visibility: visible;
+        width: 15em;
+        right: 0;
+    }
+
+    .navbar-nav-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .burger-button-close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 1em 1em 1em 0;
+        display: flex;
+        justify-content: end;
+
+        i {
+            color: $mustard;
+        }
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        background-color: $white;
+        padding: 1em;
+
+        .nav-item {
+            margin-bottom: 5px;
+            border-radius: 15px;
+
+            &:hover,
+            &.active {
+                background-color: $semi-transparent-mustard;
+
+                .nav-link {
+                    color: $black;
+                    padding: 0.5em;
+                }
+            }
+
+            .nav-link {
+                color: $black;
+                text-decoration: none;
+                display: block;
+                padding: 10px 0;
+                font-family: "Quicksand", sans-serif;
+            }
+        }
+
+        .nav-item:nth-child(3) {
+            border-bottom: 0.1em solid $black;
+            margin-bottom: 0.5em;
+            border-radius: 15px 15px 0 0;
+        }
+        .user-name-photo {
+            display: flex;
+            text-align: start;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5em;
+
+            .user-avatar {
+                width: 3em;
+                height: 3em;
+                object-fit: cover;
+                margin-right: 0.5em;
+            }
+            p {
+                font-family: $font-Poppins;
+                font-size: 0.9rem;
+                margin: 0;
+            }
+        }
+        .nav-admin-section {
+            background-color: $dark-grey;
+
+            .nav-item {
+                padding: 0.5em;
+                border-radius: 15px;
+
+                .nav-link {
+                    color: $white;
+                    padding: 0.5em;
+                    text-transform: uppercase;
+                    text-align: start;
+                    font-family: $font-Anton;
+                }
+            }
+
+            &:hover,
+            &.active {
+                background-color: $yellow;
+                border-radius: 15px;
+
+                .nav-link {
+                    color: $white;
+                    padding: 0.5em;
+                }
+            }
+        }
+    }
+}

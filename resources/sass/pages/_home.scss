@@ -1,0 +1,17 @@
+// Página de inicio
+
+.slider-title {
+    font-family: $font-Anton;
+    margin-left: 12px;
+}
+.slider-description {
+    font-family: $font-Quicksand;
+    margin-left: 12px;
+    font-style: italic;
+}
+
+@media (min-width: map-get($breakpoints, lg)) {
+    .slider-title {
+        font-size: 1.8em;
+    }
+}

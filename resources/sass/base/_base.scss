@@ -1,0 +1,29 @@
+// Estilos estándares para los elementos HTML más comunes
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $mustard;
+}
+
+body {
+    background-color: #fafbfc;
+}
+
+.hide {
+    display: none;
+}
+
+p {
+    font-family: $font-Quicksand;
+}
+
+h1 {
+    font-family: $font-Anton;
+}

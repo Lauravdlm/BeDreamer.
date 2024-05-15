@@ -1,0 +1,102 @@
+.comment-section {
+    .star-rating {
+        font-size: 15px;
+        i {
+            color: #ffd700;
+            cursor: pointer;
+        }
+    }
+
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 1.5em;
+
+    .comment-card {
+        background-color: $white;
+        border: none;
+        border-radius: 25px;
+        padding: 1em
+        h6 {
+            font-family: $font-Poppins;
+        }
+        .form-comment {
+            border-radius: 25px;
+            background-color: #e9ecef5e;
+            margin-bottom: 0.5em;
+            img {
+                object-fit: cover;
+            }
+            form {
+                width: 100%;
+                margin-left: 0.5em;
+                .rating-div {
+                    margin-bottom: 0.5em;
+                }
+                .form-control {
+                    height: 3em;
+                    border-radius: 25px;
+                    font-family: $font-Quicksand;
+                    &:focus {
+                        color: $dark-grey;
+                        background-color: $white;
+                        border-color: $yellow;
+                        outline: 0;
+                        box-shadow: none;
+                        text-indent: 0.625em;
+                    }
+                }
+                .rating-div {
+                    display: flex;
+                    label {
+                        font-family: $font-Poppins;
+                        margin-right: 0.5em;
+                    }
+                }
+
+                button {
+                    width: 7em;
+                    float: right;
+                    border-radius: 25px;
+                    margin: 0.5em 0 0.5em 0;
+                }
+            }
+        }
+
+        .comment-content-wrapper {
+            margin-left: 0.5em;
+            .comment-content {
+                flex-direction: column;
+                flex-wrap: nowrap;
+                .comment-name {
+                    font-family: $font-Quicksand;
+                    font-weight: bold;
+                    margin-right: 0.5em;
+                    .comment-username {
+                        font-family: $font-Poppins;
+                        font-size: 0.8em;
+                    }
+                }
+                .comment-date {
+                    font-size: 0.8em;
+                    font-family: $font-Poppins;
+                }
+            }
+
+            .comment-text {
+                font-size: 1em;
+                font-family: $font-Quicksand;
+                word-break: break-word;
+            }
+
+            .delete-form-comment {
+                float: right;
+                .btn {
+                    padding: 0;
+                    i {
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}

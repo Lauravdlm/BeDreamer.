@@ -1,0 +1,58 @@
+// Archivo principal que importa todos los demás archivos de estilos SCSS
+
+// Contiene los archivos de SCSS que definen variables
+@import "utils/variables";
+
+// Estilos de librerías externas como Bootstrap
+@import "vendors/bootstrap";
+
+// Archivos que definen los estilos base de la aplicación
+@import "base/typography";
+@import "base/base";
+@import "base/animations";
+
+// Estilos que definen la estructura de la página
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+
+// Estilos para componentes reutilizables
+@import "components/button";
+@import "components/carousel";
+@import "components/hamburguer";
+@import "components/searchbox";
+@import "components/modal";
+@import "components/comments-reviews";
+@import "components/list";
+@import "components/tables";
+@import "components/pagination";
+@import "components/forms";
+
+// Estilos específicos de ciertas páginas de la aplicación
+@import "pages/home";
+// Vista de la página principal
+
+@import "pages/user-panel";
+// Vista del panel de usuario
+
+@import "pages/user-favorites";
+// Vista de los favoritos de un determinado usario
+
+@import "pages/place-act-hot-rest-resume";
+// Vistas específicas de un determinado destino, actividad, hotel, restaurante
+
+@import "pages/places-blogs-index";
+// Vista de todos los blogs y destinos
+
+@import "pages/blog-post";
+// Vista de un determinado blog
+
+@import "pages/blog-edit-create";
+// Vistas de crear y editar un blog
+
+@import "pages/activities-restaurants-hotels-index";
+// Vistas de todos los destinos, actividades, hoteles, restaurantes
+
+// Estilos específicos por si diferentes roles tienen temas diferentes
+@import "themes/admin";

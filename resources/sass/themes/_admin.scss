@@ -1,0 +1,210 @@
+// Panel de Administración (header + main)
+
+#admin-header {
+    font-family: $font-Quicksand;
+    // position: fixed;
+    width: 100%;
+    .dropdown-toggle {
+        margin-left: 0.5em;
+        color: $white;
+        border: 0;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+            rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+            rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+    .dropdown-menu {
+        z-index: 10000;
+        left: 7em;
+        background-color: #343a40;
+        a,
+        button {
+            color: $white;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+    .toggle-sidebar-container {
+        #sidebar-toggle-top {
+            color: white;
+            i {
+                font-size: 1.2em;
+            }
+        }
+    }
+    @media (min-width: map-get($breakpoints, lg)) {
+        margin-left: 14em;
+        .navbar-main-wrapper {
+            margin-left: 1em;
+            .user-navbar-info {
+                .dropdown-menu {
+                    left: 8em;
+                }
+            }
+            .toggle-sidebar-container {
+                display: none;
+            }
+        }
+    }
+}
+
+#admin-backoffice {
+    #admin-main {
+        margin-top: 0;
+        padding: 1em;
+        h2 {
+            font-family: $font-Poppins;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .charts-section {
+            .chart-row {
+                padding: 0.6em;
+                .registered-user-chart-card {
+                    padding: 0 !important;
+                    .chart-title {
+                        font-family: $font-Poppins;
+                        font-weight: bold;
+                    }
+                    .chart {
+                        display: flex;
+                        height: 400px;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        .admin-users-card {
+            h3 {
+                font-family: $font-Poppins;
+                font-weight: bold;
+            }
+            .users-list {
+                img {
+                    object-fit: cover;
+                    height: 40px;
+                    width: 40px;
+                }
+                a {
+                    font-family: $font-Quicksand;
+                    text-decoration: none;
+                }
+            }
+        }
+        .info-box {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            font-family: $font-Quicksand;
+        }
+        .search-filter-add-users {
+            margin: 1em 0 1em 0;
+            .search-field-wrapper {
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                border-radius: 10px;
+                .inputs-form-user-table {
+                    display: flex;
+                    flex-direction: row;
+                    button {
+                        width: 5em;
+                    }
+                }
+            }
+        }
+        .data-table-title {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0.5em;
+            h4 {
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 0;
+            }
+            h4,
+            button,
+            a {
+                font-family: $font-Quicksand;
+            }
+        }
+
+        .add-button {
+            margin-top: 1em;
+            button,
+            a {
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+                    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+                i {
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        #create-form {
+            .create-form-header {
+                background-color: $yellow;
+                font-family: $font-Poppins;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .create-form-body {
+                .create-form {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    .create-form-group {
+                        width: 48%;
+                        label,
+                        input {
+                            font-family: $font-Quicksand;
+                        }
+                    }
+                    button {
+                        font-family: $font-Poppins;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: map-get($breakpoints, md)) {
+        .add-button {
+            margin-top: 0 !important;
+        }
+    }
+    @media (min-width: map-get($breakpoints, lg)) {
+        #admin-main {
+            margin-left: 14em;
+        }
+        .admin-users-card {
+            .users-list {
+                img {
+                    height: 50px !important;
+                    width: 50px !important;
+                }
+            }
+        }
+    }
+
+    @media (min-width: map-get($breakpoints, xxl)) {
+        .create-modal-dialog {
+            max-width: 800px;
+            width: 100%;
+        }
+        .admin-users-card {
+            .users-list {
+                img {
+                    height: 74.5px !important;
+                    width: 74.5px !important;
+                }
+            }
+        }
+    }
+}

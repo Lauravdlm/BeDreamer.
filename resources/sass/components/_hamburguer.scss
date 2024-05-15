@@ -1,0 +1,14 @@
+// Menú Hamburguesa
+
+.burger-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: $black;
+    padding: 0;
+
+    &.active {
+        display: block !important;
+    }
+}

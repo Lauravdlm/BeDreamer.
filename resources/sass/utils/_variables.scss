@@ -1,0 +1,36 @@
+// Definición de puntos de ruptura
+$breakpoints: (
+    sm: 576px,
+    // Pequeños dispositivos
+    md: 768px,
+    // Tablets
+    lg: 992px,
+    // Portátiles
+    xl: 1200px,
+    // Pantallas pc grandes
+    xxl: 1440px,
+    // Pantallas pc extra grandes
+);
+
+// Colores
+$yellow: #ffce40;
+$mustard: #ffab07;
+$semi-transparent-mustard: #ffab072e;
+$naples-yellow: #ffdb70;
+$earth-yellow: #fec072;
+
+$light-blue: #a5c9c7;
+$powder-blue: #9cbbd8;
+$indigo-dye: #014771;
+
+$lilac: #baa2c9;
+$tea-rose: #dcb0aa;
+$puce: #dc889b;
+
+$cool-gray: #8d95ca;
+$dark-grey: #616161;
+
+$olinive: #b8c679;
+
+$black: #000000;
+$white: #ffffff;

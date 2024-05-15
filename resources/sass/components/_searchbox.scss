@@ -1,0 +1,85 @@
+//Buscador dinámico del encabezado de la página principal
+
+#searchbox {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+
+    form {
+        justify-content: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        width: 17em;
+        background-color: $white;
+        border-radius: 10px;
+
+        .search-box-input-select {
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            background-color: $white;
+
+            input[type="text"] {
+                border: 0;
+                padding: 5px;
+                font-family: $font-Quicksand;
+                padding-left: 10px;
+                margin: 0;
+                border-radius: 10px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 100%;
+            }
+
+            i {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        #searchOptionsContainer {
+            border-radius: 0 0 10px 10px;
+            max-width: 100%;
+            border: none;
+            background-color: $white;
+            z-index: 1;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            max-height: 120px;
+            overflow: auto;
+
+            .option-item {
+                cursor: pointer;
+                font-size: 0.9rem;
+                font-weight: 200;
+                padding: 4px 24px 8px 10px;
+                font-family: $font-Poppins;
+                &:hover {
+                    background-color: $semi-transparent-mustard;
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    @media (min-width: map-get($breakpoints, sm)) {
+        form {
+            width: 25em;
+        }
+    }
+    @media (min-width: map-get($breakpoints, md)) {
+        form {
+            width: 30em;
+        }
+    }
+    @media (min-width: map-get($breakpoints, lg)) {
+        form {
+            width: 35em;
+        }
+    }
+}

@@ -1,0 +1,252 @@
+// Página principal de un determinado destino, restaurante, hotel u actividad
+
+.resume-container {
+    .resume-section {
+        .resume-section-wrapper {
+            .resume-data {
+                margin-bottom: .5em;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                small {
+                    margin-left: .5em;
+                    font-family: $font-Poppins;
+                    font-weight: 400;
+                }
+            }
+            .resume-wrapper {
+                .resume-photo-wrapper {
+                    .resume-photo {
+                        img {
+                            border-radius: 3px;
+                            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+                                rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            transition: 1s ease;
+                            &:hover {
+                                filter: grayscale(50%);
+                                // -webkit-transform: scale(0.8);
+                                // -ms-transform: scale(0.8);
+                                // transform: scale(0.8);
+                                transition: 1s ease;
+                            }
+                        }
+                    }
+                }
+                .resume-info {
+                    p {
+                        font-family: $font-Poppins;
+                        text-align: justify;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    .second-side {
+        .place-things-to-do-section {
+            .place-things-to-do-wrapper {
+                h2 {
+                    font-family: $font-Anton;
+                    text-align: center;
+                    margin-bottom: 0.5em;
+                }
+                .cards-things-to-do {
+                    flex-wrap: wrap;
+                    align-content: center;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 0.5em;
+                    .place-resume-card {
+                        margin-bottom: 1em;
+                        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                        height: 100%;
+                        width: 14em;
+                        .card-img-top {
+                            height: 8em;
+                        }
+                        .place-resume-card-body {
+                            .card-title {
+                                font-family: $font-Quicksand;
+                                font-weight: bold;
+                                text-align: center;
+                            }
+                            .button-55 {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .place-resume-card:nth-child(1) .place-resume-card-body {
+                        background-color: $light-blue;
+                    }
+
+                    .place-resume-card:nth-child(2) .place-resume-card-body {
+                        background-color: $puce;
+                    }
+
+                    .place-resume-card:nth-child(3) .place-resume-card-body {
+                        background-color: $earth-yellow;
+                    }
+                }
+            }
+        }
+
+        .resume-map-section {
+            border-radius: 3px;
+            h4 {
+                font-family: $font-Quicksand;
+                font-weight: bold;
+            }
+            margin-bottom: 1.5em;
+            .resume-map-wrapper {
+                box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+                    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                border-radius: 3px;
+                #map {
+                    height: 25em;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: map-get($breakpoints, sm)) {
+        .resume-title,
+        .resume-data {
+            margin-left: 1em;
+        }
+        .resume-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            .resume-photo {
+                height: 20em;
+                width: 30em;
+            }
+            .resume-info {
+                margin-left: 1em;
+                margin-right: 1em;
+            }
+        }
+        .resume-map-section {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+        .cards-things-to-do {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            flex-wrap: nowrap !important;
+            .place-resume-card {
+                height: 16em !important;
+                margin: 0.5em;
+                .card-img-top {
+                    height: 7em !important;
+                }
+                .place-resume-card-body {
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    @media (min-width: map-get($breakpoints, md)) {
+        .resume-photo {
+            width: 40em !important;
+        }
+    }
+
+    @media (min-width: map-get($breakpoints, lg)) {
+        .resume-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5em;
+            .resume-photo-wrapper {
+                .resume-photo {
+                    width: 34em !important;
+                    margin-left: 1em;
+                }
+            }
+            .resume-info {
+                p {
+                    font-size: 1em !important;
+                }
+            }
+        }
+        .resume-map-section {
+            margin-bottom: 3.5em !important;
+            h4 {
+                font-size: 1.5em;
+            }
+        }
+        .place-things-to-do-section {
+            .place-things-to-do-wrapper {
+                .cards-things-to-do {
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+
+    @media (min-width: map-get($breakpoints, xl)) {
+        display: flex;
+        justify-content: space-between;
+        .resume-section {
+            width: 50%;
+            .resume-wrapper {
+                flex-direction: column;
+                align-items: center;
+                .resume-photo,
+                .resume-info {
+                    width: 100%;
+                }
+                .resume-info {
+                    padding: 0 0 0 0.5em;
+                }
+                .resume-photo {
+                    width: 35em !important;
+                }
+            }
+        }
+        .second-side {
+            width: 50%;
+            margin-left: 2em;
+            margin-top: 4em;
+            .resume-map-wrapper {
+                margin-right: 2em;
+                #map {
+                    height: 27em !important;
+                }
+            }
+
+            .button-55 {
+                padding: 0.5em;
+            }
+        }
+    }
+    @media (min-width: map-get($breakpoints, xxl)) {
+        .resume-section {
+            .resume-wrapper {
+                .resume-photo {
+                    width: 38em !important;
+                }
+            }
+        }
+        .second-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

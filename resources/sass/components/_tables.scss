@@ -1,0 +1,101 @@
+// Tablas Panel de Administrador
+
+.data-table-wrapper {
+    .data-table-content-wrapper {
+        overflow-x: auto;
+        .table-body {
+            width: calc(100% - 1.1rem);
+            overflow-x: auto;
+            margin-right: 1.1rem;
+            table {
+                th {
+                    font-family: $font-Poppins;
+                    font-size: 0.9em;
+                    background-color: #343a40;
+                    border-color: #4b545c;
+                    color: white;
+                    text-align: justify;
+                    vertical-align: bottom;
+                    position: sticky;
+                    top: 0;
+                    z-index: 1;
+                }
+                td {
+                    font-family: $font-Quicksand;
+                    font-size: 0.7em;
+                    word-break: break-word;
+                    &.editable {
+                        cursor: pointer;
+                    }
+                    &.action-cell {
+                        position: sticky;
+                        // right: 0;
+                        right: -30px;
+                    }
+                    &.photo-td {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        align-content: center;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        .form-input-photo {
+                            margin-top: 0.5em;
+                            opacity: 0;
+                            width: 0.1px;
+                            height: 0.1px;
+                            position: absolute;
+                        }
+                        .form-label-photo,
+                        .update-photo {
+                            display: block;
+                            position: relative;
+                            width: 10em;
+                            height: 2em;
+                            border-radius: 25px;
+                            background: linear-gradient(
+                                40deg,
+                                rgba(52, 58, 64, 0.8),
+                                $black
+                            );
+                            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+                                rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $white;
+                            font-weight: bold;
+                            cursor: pointer;
+                            margin-left: 0.5em;
+                            font-size: 12px;
+                            transition: transform 0.2s ease-out;
+                        }
+                        .update-photo {
+                            background: linear-gradient(
+                                40deg,
+                                $black,
+                                rgba(52, 58, 64, 0.8)
+                            );
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: map-get($breakpoints, xl)) {
+        .table-body {
+            margin: 0;
+            width: 100% !important;
+            padding: 0.5em;
+            table {
+                border-collapse: separate;
+                border-spacing: 0;
+                border-radius: 8px;
+                overflow: hidden;
+                td {
+                    font-size: 0.8em !important;
+                }
+            }
+        }
+    }
+}

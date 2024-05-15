@@ -1,0 +1,139 @@
+// Favoritos de un determinado usuario
+
+.favpage-wrapper {
+    .favpage-title {
+        font-family: $font-Anton;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .favorites-container {
+        margin-bottom: 2em;
+        background: white;
+        padding: 1em;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        border-radius: 5px;
+        margin-bottom: 2em;
+        .favs {
+            border-bottom: 8px double #ffbf00;
+            flex-direction: column;
+            margin-bottom: 1em;
+            align-content: center;
+            justify-content: center;
+            align-items: stretch;
+            .fav-place-title {
+                text-transform: uppercase;
+                font-family: $font-Poppins;
+                text-align: center;
+            }
+            ul {
+                padding-left: 0;
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 0.3em;
+                    font-family: $font-Quicksand;
+                    padding: 0.5em;
+                    border-radius: 0 5px 5px 0;
+                    background-color: rgba(222, 226, 230, 0.08);
+                    border-left: 11px solid $yellow;
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+                    &:nth-child(even) {
+                        border-left: 11px solid $mustard;
+                    }
+
+                    .delete-btn {
+                        background: white;
+                        margin-left: 1em;
+                        color: $red;
+                        border-color: $red;
+                        height: 2em;
+                        width: 2em;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        align-content: center;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        border: 2px solid;
+                        margin-right: 0.5em;
+                        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+                            rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+                    }
+                }
+            }
+        }
+    }
+    .create-favorite-form {
+        background-color: white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+            rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border-radius: 3px;
+        .form-container {
+            h2 {
+                font-family: $font-Poppins;
+                text-align: center;
+                padding: 0.5em;
+            }
+            form {
+                .form-group {
+                    margin-bottom: 0.5em;
+                    label {
+                        font-weight: bold;
+                        font-family: $font-Poppins;
+                    }
+                    input,
+                    select {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        font-family: $font-Quicksand;
+                    }
+                }
+                .button-container {
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-content: center;
+                    justify-content: center;
+                    align-items: center;
+                    button {
+                        width: 15em;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: map-get($breakpoints, md)) {
+        .favorites-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            .favs {
+                flex-direction: column;
+                flex-wrap: nowrap;
+                width: 45%;
+            }
+        }
+    }
+    @media (min-width: map-get($breakpoints, lg)) {
+        .favs {
+            width: 30% !important;
+        }
+        .create-favorite-form {
+            width: 70%;
+        }
+    }
+}

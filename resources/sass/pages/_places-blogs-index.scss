@@ -1,0 +1,92 @@
+// Página principal de todos los destinos y blogs
+
+.a-index-container {
+    .section-title-container {
+        margin: 0.5em;
+        .section-title {
+            font-family: $font-Anton;
+            text-align: center;
+        }
+    }
+    .a-section-container-wrapper {
+        margin: 0.5em 0 0 0;
+        .a-section-container {
+            .a-custom-card {
+                margin-bottom: 1em;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                border-radius: 10px;
+                // height: 100%;
+
+                .a-custom-card-body {
+                    display: flex;
+                    flex-direction: column;
+                    .card-title {
+                        h1 {
+                            text-align: center;
+                        }
+                    }
+                    .card-a-frontpage {
+                        .frontpage-img {
+                            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+                            border-radius: 10px;
+                            img {
+                                box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px
+                                    3.2px;
+                                border-radius: 10px;
+                                height: 150px;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                    .btn-group {
+                        display: flex;
+                        .button-55 {
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pagination {
+        padding: 5px 5px;
+        font-family: $font-Quicksand;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    @media (min-width: map-get($breakpoints, sm)) {
+        .a-section-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-between;
+            align-items: center;
+            .a-custom-card {
+                width: 49%;
+                margin-bottom: 0.5em;
+            }
+        }
+        .pagination {
+            float: right;
+        }
+    }
+
+    @media (min-width: map-get($breakpoints, lg)) {
+        .a-section-container {
+            justify-content: space-around;
+            .a-custom-card {
+                width: 30%;
+            }
+        }
+    }
+
+    @media (min-width: map-get($breakpoints, xl)) {
+        .a-custom-card {
+            width: 24% !important;
+        }
+    }
+}
